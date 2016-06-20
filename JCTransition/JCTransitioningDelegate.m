@@ -21,6 +21,9 @@
 /** 转场后控制器 */
 @property(strong, nonatomic) UIViewController *presentedVC;
 
+/** 转场模式 */
+@property(assign, nonatomic) JCTransitionMode JCTransitionMode;
+
 @end
 
 @implementation JCTransitioningDelegate
@@ -70,6 +73,17 @@ initWithPresentingViewController:(UIViewController *)presentingVC
     return self;
 }
 
+- (instancetype)
+initWithPresentingViewController:(UIViewController *)presentingVC
+         presentedViewController:(UIViewController *)presentedVC
+              withTransitionMode:(JCTransitionMode)JCTransitionMode {
+    if (self = [self initWithPresentingViewController:presentingVC
+                              presentedViewController:presentedVC]) {
+        self.JCTransitionMode = JCTransitionMode;
+    }
+    return self;
+}
+
 + (instancetype)animatedTransitioningWithPresentingViewController:
                     (UIViewController *)presentingVC
                                           presentedViewController:
@@ -95,6 +109,17 @@ initWithPresentingViewController:(UIViewController *)presentingVC
                  presentedViewController:presentedVC
                       WithPopUpAnimation:popUpAnimationBlock
                 WithDestructionAnimation:destructionAnimationBlock];
+}
+
++ (instancetype)animatedTransitioningWithPresentingViewController:
+                    (UIViewController *)presentingVC
+                                          presentedViewController:
+                                              (UIViewController *)presentedVC
+                                               withTransitionMode:
+                                                   (JCTransitionMode)
+                                                       JCTransitionMode {
+
+    return [[self alloc] initWithPresentingViewController:presentingVC presentedViewController:presentedVC withTransitionMode:JCTransitionMode];
 }
 
 /**
@@ -179,6 +204,7 @@ animationControllerForDismissedController:(UIViewController *)dismissed {
     animatedTransition.popUpAnimationBlock = self.popUpAnimationBlock;
     animatedTransition.destructionAnimationBlock =
         self.destructionAnimationBlock;
+    animatedTransition.JCTransitionMode = self.JCTransitionMode;
 
     return animatedTransition;
 }

@@ -9,6 +9,14 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
+typedef NS_ENUM(NSInteger, JCTransitionMode) {
+    JCTransitionModeFromTopToBottom, // 从上往下
+    JCTransitionModeFromBottomToTop, // 从下往上
+    JCTransitionModeFromLeftToRight, // 从左往右
+    JCTransitionModeFromRightToLeft, // 从右往左
+    JCTransitionModeAlpha,           // 透明度变化
+};
+
 /**
  *  实现弹出时的动画
  *
@@ -54,5 +62,7 @@ typedef void (^destructionAnimationBlock)(
  *  声明销毁动画回调block
  */
 @property(copy, nonatomic) destructionAnimationBlock destructionAnimationBlock;
+
+@property(assign, nonatomic) JCTransitionMode JCTransitionMode;
 
 @end

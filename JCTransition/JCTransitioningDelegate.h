@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-@class JCAnimatedTransitioning;
+#import "JCAnimatedTransitioning.h"
 
 typedef void (^popUpAnimationBlock)(
     UIView *view, id<UIViewControllerContextTransitioning> transitionContext);
@@ -32,6 +32,11 @@ initWithPresentingViewController:(UIViewController *)presentingVC
         WithDestructionAnimation:
             (destructionAnimationBlock)destructionAnimationBlock;
 
+- (instancetype)
+initWithPresentingViewController:(UIViewController *)presentingVC
+         presentedViewController:(UIViewController *)presentedVC
+              withTransitionMode:(JCTransitionMode)JCTransitionMode;
+
 + (instancetype)animatedTransitioningWithPresentingViewController:
                     (UIViewController *)presentingVC
                                           presentedViewController:
@@ -46,6 +51,14 @@ animatedTransitioningWithPresentingViewController:
                                    (popUpAnimationBlock)popUpAnimationBlock
                          WithDestructionAnimation:(destructionAnimationBlock)
                                                       destructionAnimationBlock;
+
++ (instancetype)animatedTransitioningWithPresentingViewController:
+                    (UIViewController *)presentingVC
+                                          presentedViewController:
+                                              (UIViewController *)presentedVC
+                                               withTransitionMode:
+                                                   (JCTransitionMode)
+                                                       JCTransitionMode;
 
 // 跳转到指定控制器
 - (void)jc_jumpToPresentingController;

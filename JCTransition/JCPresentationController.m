@@ -15,7 +15,6 @@
  *  设置跳转后控制器View的位置和大小
  */
 - (void)containerViewWillLayoutSubviews {
-    NSLog(@"%@", NSStringFromCGRect(self.presentedRect));
 
     if (CGRectEqualToRect(self.presentedRect, CGRectZero)) {
         // 如果没有设置位置大小，默认为全屏
