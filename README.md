@@ -30,7 +30,7 @@
 
 ```
 效果如下图：
-![](https://github.com/chenjiangchuan/JCTransition/tree/master/JCTransitionExample/Resources/Image/first_init.gif)
+![](https://github.com/chenjiangchuan/JCTransition/raw/master/JCTransitionExample/Resources/Image/first_init.gif)
 
 ```
 /*
