@@ -29,8 +29,8 @@
 }
 
 ```
-效果如下图：
-![](https://github.com/chenjiangchuan/JCTransition/raw/master/JCTransitionExample/Resources/Image/1.gif)
+效果：
+![](https://github.com/chenjiangchuan/JCTransition/raw/master/JCTransitionExample/Resources/Image/init1.gif)
 
 ```
 /*
