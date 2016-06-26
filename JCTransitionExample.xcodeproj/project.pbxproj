@@ -13,7 +13,6 @@
 		D65A72231D123D0900B206BC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D65A72211D123D0900B206BC /* LaunchScreen.storyboard */; };
 		D65A722E1D123D0900B206BC /* JCTransitionExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D65A722D1D123D0900B206BC /* JCTransitionExampleTests.m */; };
 		D6BD0B7A1D1FECEC00D6D6F6 /* init1.gif in Resources */ = {isa = PBXBuildFile; fileRef = D6BD0B761D1FECEC00D6D6F6 /* init1.gif */; };
-		D6BD0B7B1D1FECEC00D6D6F6 /* init4.gif in Resources */ = {isa = PBXBuildFile; fileRef = D6BD0B771D1FECEC00D6D6F6 /* init4.gif */; };
 		D6BD0B7C1D1FECEC00D6D6F6 /* init3.gif in Resources */ = {isa = PBXBuildFile; fileRef = D6BD0B781D1FECEC00D6D6F6 /* init3.gif */; };
 		D6BD0B7D1D1FECEC00D6D6F6 /* init2.gif in Resources */ = {isa = PBXBuildFile; fileRef = D6BD0B791D1FECEC00D6D6F6 /* init2.gif */; };
 		D6DA6B491D125AE300A4AB5B /* JCTransitioningDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D6DA6B481D125AE300A4AB5B /* JCTransitioningDelegate.m */; };
@@ -56,7 +55,6 @@
 		D65A722D1D123D0900B206BC /* JCTransitionExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JCTransitionExampleTests.m; sourceTree = "<group>"; };
 		D65A722F1D123D0900B206BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D6BD0B761D1FECEC00D6D6F6 /* init1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = init1.gif; sourceTree = "<group>"; };
-		D6BD0B771D1FECEC00D6D6F6 /* init4.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = init4.gif; sourceTree = "<group>"; };
 		D6BD0B781D1FECEC00D6D6F6 /* init3.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = init3.gif; sourceTree = "<group>"; };
 		D6BD0B791D1FECEC00D6D6F6 /* init2.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = init2.gif; sourceTree = "<group>"; };
 		D6DA6B471D125AE300A4AB5B /* JCTransitioningDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCTransitioningDelegate.h; sourceTree = "<group>"; };
@@ -208,7 +206,6 @@
 			isa = PBXGroup;
 			children = (
 				D6BD0B761D1FECEC00D6D6F6 /* init1.gif */,
-				D6BD0B771D1FECEC00D6D6F6 /* init4.gif */,
 				D6BD0B781D1FECEC00D6D6F6 /* init3.gif */,
 				D6BD0B791D1FECEC00D6D6F6 /* init2.gif */,
 			);
@@ -342,7 +339,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				D6DA6B781D12A2B800A4AB5B /* Masonry.podspec in Resources */,
-				D6BD0B7B1D1FECEC00D6D6F6 /* init4.gif in Resources */,
 				D6BD0B7C1D1FECEC00D6D6F6 /* init3.gif in Resources */,
 				D65A72231D123D0900B206BC /* LaunchScreen.storyboard in Resources */,
 				D6BD0B7A1D1FECEC00D6D6F6 /* init1.gif in Resources */,
