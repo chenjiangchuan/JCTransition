@@ -30,7 +30,7 @@
 
 ```
 效果如下图：
-![](https://github.com/chenjiangchuan/JCTransition/JCTransitionExample/Resources/Image/first_init.gif)
+![](https://github.com/chenjiangchuan/JCTransition/tree/master/JCTransitionExample/Resources/Image/first_init.gif)
 
 ```
 /*
@@ -98,7 +98,7 @@
 ```
 
 效果如下图：
-![](https://github.com/chenjiangchuan/JCTransition/JCTransitionExample/Resources/Image/third_init.gif)
+![](https://github.com/chenjiangchuan/JCTransition/tree/master/JCTransitionExample/Resources/Image/third_init.gif)
 
 ### 新添加了一个手势presentingGestureRecognizerEnabled，设为YES后，效果如下：
-![](https://github.com/chenjiangchuan/JCTransition/JCTransitionExample/Resources/Image/addGe.gif)
+![](https://github.com/chenjiangchuan/JCTransition/tree/master/JCTransitionExample/Resources/Image/addGe.gif)
