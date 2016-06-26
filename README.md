@@ -30,7 +30,7 @@
 
 ```
 效果如下图：
-![](https://github.com/chenjiangchuan/JCTransition/raw/master/JCTransitionExample/Resources/Image/first_init.gif)
+![](https://github.com/chenjiangchuan/JCTransition/raw/master/JCTransitionExample/Resources/Image/1.gif)
 
 ```
 /*
@@ -49,6 +49,8 @@
     return _transitionDelegate;
 }
 ```
+
+效果：![](https://github.com/chenjiangchuan/JCTransition/raw/master/JCTransitionExample/Resources/Image/init2.gif)
 
 ```
 /*
@@ -97,8 +99,11 @@
 }
 ```
 
-效果如下图：
-![](https://github.com/chenjiangchuan/JCTransition/raw/master/JCTransitionExample/Resources/Image/third_init.gif)
+效果：
+![](https://github.com/chenjiangchuan/JCTransition/raw/master/JCTransitionExample/Resources/Image/init3.gif)
 
-### 新添加了一个手势presentingGestureRecognizerEnabled，设为YES后，效果如下：
-![](https://github.com/chenjiangchuan/JCTransition/raw/master/JCTransitionExample/Resources/Image/addGe.gif)
+### 新添加了一个手势presentingGestureRecognizerEnabled，设为YES后：
+```
+[_transitionDelegate setPresentingGestureRecognizerEnabled:YES];
+```
+![](https://github.com/chenjiangchuan/JCTransition/raw/master/JCTransitionExample/Resources/Image/init4.gif)

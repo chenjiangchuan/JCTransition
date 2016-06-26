@@ -29,7 +29,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    [self.view setBackgroundColor:[UIColor whiteColor]];
+    [self.view setBackgroundColor:[UIColor redColor]];
     [self.view addSubview:self.testLabel];
 }
 
@@ -51,19 +51,51 @@
 
 // View的初始化都交给getter去做了
 #pragma mark - getters and setters
+/*
+ 方式三：不使用模块的动画，自定义自己的动画
+ */
 - (JCTransitioningDelegate *)transitionDelegate {
     if (_transitionDelegate == nil) {
+        _transitionDelegate = [[JCTransitioningDelegate alloc]
+                               initWithPresentingViewController:self
+                               presentedViewController:self.presentedVC
+                               WithPopUpAnimation:^(
+                                                    UIView *view,
+                                                    id<UIViewControllerContextTransitioning> transitionContext) {
 
-        _transitionDelegate = [JCTransitioningDelegate animatedTransitioningWithPresentingViewController:self
-                                                                                 presentedViewController:self.presentedVC
-                                                                                      withTransitionMode:JCTransitionModeAlpha];
+                                   // 在这里自定义弹出时的转场动画
+                                   view.alpha = 0.0;
 
+                                   [UIView animateWithDuration:1.5
+                                                    animations:^{
+                                                        view.alpha = 1.0;
+                                                    }
+                                                    completion:^(BOOL finished) {
+                                                        // 一定要告诉系统转场动画结束
+                                                        [transitionContext completeTransition:YES];
+                                                    }];
+
+                               }
+                               WithDestructionAnimation:^(
+                                                          UIView *view,
+                                                          id<UIViewControllerContextTransitioning> transitionContext) {
+                                   // 在这里自定义销毁时的转场动画
+                                   [UIView animateWithDuration:1.5
+                                                    animations:^{
+                                                        view.alpha = 0.0;
+                                                    }
+                                                    completion:^(BOOL finished) {
+                                                        // 一定要告诉系统转场动画结束
+                                                        [transitionContext completeTransition:YES];
+                                                    }];
+                               }];
+        
         // 设置转场后控制器View的位置和大小
         [_transitionDelegate setPresentedRect:(CGRect){{200, 200}, {100, 100}}];
+        [_transitionDelegate setPresentingGestureRecognizerEnabled:YES];
     }
     return _transitionDelegate;
 }
-
 
 - (JCPresentedVC *)presentedVC {
     if (_presentedVC == nil) {
