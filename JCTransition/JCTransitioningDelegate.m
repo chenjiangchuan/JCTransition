@@ -44,6 +44,7 @@ initWithPresentingViewController:(UIViewController *)presentingVC
     if (self = [super init]) {
         self.presentingVC = presentingVC;
         self.presentedVC = presentedVC;
+        self.presentingGestureRecognizerEnabled = NO;
     }
     return self;
 }
@@ -157,6 +158,7 @@ presentationControllerForPresentedViewController:(UIViewController *)presented
         initWithPresentedViewController:presented
                presentingViewController:presenting];
 
+    [pc setPresentingGestureRecognizerEnabled:self.presentingGestureRecognizerEnabled];
     [pc setPresentedRect:self.presentedRect];
 
     return pc;

@@ -11,6 +11,8 @@
 #import "JCPresentationController.h"
 
 @implementation JCPresentationController
+
+#pragma mark - View life
 /**
  *  设置跳转后控制器View的位置和大小
  */
@@ -38,6 +40,15 @@
  *  @param completed 是否完成
  */
 - (void)presentationTransitionDidEnd:(BOOL)completed {
+
+    if (self.isPresentingGestureRecognizerEnabled) {
+
+        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]
+                                       initWithTarget:self
+                                       action:@selector(coverBtnClick:)];
+
+        [self.containerView addGestureRecognizer:tap];
+    }
 }
 
 /**
@@ -54,6 +65,17 @@
 - (void)dismissalTransitionDidEnd:(BOOL)completed {
     // 同理，销毁后一定要移除转场后控制的视图！！！
     [self.presentedView removeFromSuperview];
+}
+
+#pragma mark - Event Response
+
+/**
+ *  手势方法
+ */
+- (void)coverBtnClick:(UITapGestureRecognizer *)tap {
+    // 关闭弹出视图
+    [self.presentingViewController dismissViewControllerAnimated:YES
+                                                      completion:nil];
 }
 
 @end

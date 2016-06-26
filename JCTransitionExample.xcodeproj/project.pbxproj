@@ -12,6 +12,10 @@
 		D65A72201D123D0900B206BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D65A721F1D123D0900B206BC /* Assets.xcassets */; };
 		D65A72231D123D0900B206BC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D65A72211D123D0900B206BC /* LaunchScreen.storyboard */; };
 		D65A722E1D123D0900B206BC /* JCTransitionExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D65A722D1D123D0900B206BC /* JCTransitionExampleTests.m */; };
+		D6BD0B6E1D1FE6CB00D6D6F6 /* addGe.gif in Resources */ = {isa = PBXBuildFile; fileRef = D6BD0B6C1D1FE6CB00D6D6F6 /* addGe.gif */; };
+		D6BD0B6F1D1FE6CB00D6D6F6 /* first_init.gif in Resources */ = {isa = PBXBuildFile; fileRef = D6BD0B6D1D1FE6CB00D6D6F6 /* first_init.gif */; };
+		D6BD0B731D1FE6D100D6D6F6 /* settingframe.gif in Resources */ = {isa = PBXBuildFile; fileRef = D6BD0B711D1FE6D100D6D6F6 /* settingframe.gif */; };
+		D6BD0B751D1FE87B00D6D6F6 /* third_init.gif in Resources */ = {isa = PBXBuildFile; fileRef = D6BD0B741D1FE87B00D6D6F6 /* third_init.gif */; };
 		D6DA6B491D125AE300A4AB5B /* JCTransitioningDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D6DA6B481D125AE300A4AB5B /* JCTransitioningDelegate.m */; };
 		D6DA6B4D1D12883000A4AB5B /* JCPresentationController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6DA6B4C1D12883000A4AB5B /* JCPresentationController.m */; };
 		D6DA6B501D128C1000A4AB5B /* JCAnimatedTransitioning.m in Sources */ = {isa = PBXBuildFile; fileRef = D6DA6B4F1D128C1000A4AB5B /* JCAnimatedTransitioning.m */; };
@@ -51,6 +55,10 @@
 		D65A72291D123D0900B206BC /* JCTransitionExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JCTransitionExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D65A722D1D123D0900B206BC /* JCTransitionExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JCTransitionExampleTests.m; sourceTree = "<group>"; };
 		D65A722F1D123D0900B206BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D6BD0B6C1D1FE6CB00D6D6F6 /* addGe.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = addGe.gif; sourceTree = "<group>"; };
+		D6BD0B6D1D1FE6CB00D6D6F6 /* first_init.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = first_init.gif; sourceTree = "<group>"; };
+		D6BD0B711D1FE6D100D6D6F6 /* settingframe.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = settingframe.gif; sourceTree = "<group>"; };
+		D6BD0B741D1FE87B00D6D6F6 /* third_init.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = third_init.gif; sourceTree = "<group>"; };
 		D6DA6B471D125AE300A4AB5B /* JCTransitioningDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCTransitioningDelegate.h; sourceTree = "<group>"; };
 		D6DA6B481D125AE300A4AB5B /* JCTransitioningDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCTransitioningDelegate.m; sourceTree = "<group>"; };
 		D6DA6B4B1D12883000A4AB5B /* JCPresentationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCPresentationController.h; sourceTree = "<group>"; };
@@ -130,6 +138,7 @@
 			children = (
 				D65A72391D123DE800B206BC /* JCTransition */,
 				D65A723A1D123DF800B206BC /* Class */,
+				D6BD0B6A1D1FE68B00D6D6F6 /* Resources */,
 				D65A721F1D123D0900B206BC /* Assets.xcassets */,
 				D65A72211D123D0900B206BC /* LaunchScreen.storyboard */,
 				D65A72241D123D0900B206BC /* Info.plist */,
@@ -185,6 +194,25 @@
 				D65A72171D123D0900B206BC /* AppDelegate.m */,
 			);
 			path = Other;
+			sourceTree = "<group>";
+		};
+		D6BD0B6A1D1FE68B00D6D6F6 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D6BD0B6B1D1FE68B00D6D6F6 /* Image */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		D6BD0B6B1D1FE68B00D6D6F6 /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				D6BD0B741D1FE87B00D6D6F6 /* third_init.gif */,
+				D6BD0B711D1FE6D100D6D6F6 /* settingframe.gif */,
+				D6BD0B6C1D1FE6CB00D6D6F6 /* addGe.gif */,
+				D6BD0B6D1D1FE6CB00D6D6F6 /* first_init.gif */,
+			);
+			path = Image;
 			sourceTree = "<group>";
 		};
 		D6DA6B551D12914900A4AB5B /* Controller */ = {
@@ -313,8 +341,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6BD0B731D1FE6D100D6D6F6 /* settingframe.gif in Resources */,
 				D6DA6B781D12A2B800A4AB5B /* Masonry.podspec in Resources */,
+				D6BD0B6F1D1FE6CB00D6D6F6 /* first_init.gif in Resources */,
 				D65A72231D123D0900B206BC /* LaunchScreen.storyboard in Resources */,
+				D6BD0B751D1FE87B00D6D6F6 /* third_init.gif in Resources */,
+				D6BD0B6E1D1FE6CB00D6D6F6 /* addGe.gif in Resources */,
 				D65A72201D123D0900B206BC /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -8,7 +8,7 @@
 比如：
 控制器A ----跳转到---> 控制器B 
 
-只要在控制器A声明一个JCTransitioningDelegate属性，然后初始化即可（目前有3种方式）：
+### 只要在控制器A声明一个JCTransitioningDelegate属性，然后初始化即可（目前有3种方式）：
 
 
 
@@ -29,6 +29,8 @@
 }
 
 ```
+效果如下图：
+![](https://github.com/chenjiangchuan/JCTransition/JCTransitionExample/Resources/Image/first_init.gif)
 
 ```
 /*
@@ -94,3 +96,9 @@
     return _transitionDelegate;
 }
 ```
+
+效果如下图：
+![](https://github.com/chenjiangchuan/JCTransition/JCTransitionExample/Resources/Image/third_init.gif)
+
+### 新添加了一个手势presentingGestureRecognizerEnabled，设为YES后，效果如下：
+![](https://github.com/chenjiangchuan/JCTransition/JCTransitionExample/Resources/Image/addGe.gif)

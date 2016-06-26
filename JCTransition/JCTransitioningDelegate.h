@@ -76,4 +76,19 @@ animatedTransitioningWithPresentingViewController:
 /** presented的位置和大小 */
 @property(assign, nonatomic) CGRect presentedRect;
 
+/* 
+    当转场后控制器presented的view不能覆盖转场前控制器presenting的view，
+    用户点击presenting View，presented View不会消失。
+    只有点击在presented View上，才会让presented View消失。
+    
+    为了解决这个问题，在presenting View上添加了一个手势，这样当点击事件在presenting View
+    上也能让presented View消失。
+ 
+    但是，presented View将不能响应自己的事件。
+ 
+    isPresentingGestureRecognizerEnabled默认为NO
+ */
+/** 为转场前控制器添加手势 */
+@property (assign, nonatomic, getter=isPresentingGestureRecognizerEnabled) BOOL presentingGestureRecognizerEnabled;
+
 @end
